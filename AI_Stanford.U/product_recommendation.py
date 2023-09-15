@@ -1,10 +1,8 @@
 import collections
 
 def extractWordFeatures(x):
-  """Extract word features for a review (string) as input and returns a feature vector ϕ(x) for product recommendation (you should represent the vector ϕ(x) as a dict in Python).
+  """Extract word features for a review (string) as input and returns a feature vector ϕ(x) for product recommendation
 
-  Args:
-    x: A string.
 
   Returns:
     A dict representing the feature vector ϕ(x).
@@ -20,4 +18,4 @@ def extractWordFeatures(x):
     wordDict["positive"] -= 1
   return wordDict
 
-print(extractWordFeatures("Godtouch apartment stay was love, but AC was broken and food was bad which gave me food poisoning"))
+print(extractWordFeatures("Godtouch apartment stay was great, but AC was broken and food was bad which gave me food poisoning"))
