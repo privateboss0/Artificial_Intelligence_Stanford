@@ -4,7 +4,7 @@ def extractWordFeatures(x):
   """Extract word features for a review (string) as input and returns a feature vector ϕ(x) for product recommendation
 
 This code works by first checking if the word "great" is in the dictionary. If it is, the value of the positive key is decremented by 1. 
-This is because the word "love" is a positive word, but it is being used in a negative context in the review
+This is because the word "great" is a positive word, but it is being used in a negative context in the review
   
   Returns:
     A dict representing the feature vector ϕ(x).
