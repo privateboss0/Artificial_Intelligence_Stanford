@@ -16,8 +16,11 @@ class TransportationProblem(object):
       result.append(('walk', state + 1, 1))
     if state * 2 <= self.N:
       result.append(('Street_Car', state * 2, 2))
+
+    # Combine walk and street car to get to the problem
     if state + 2 <= self.N:
-      result.append(('walk+street_car', state + 2, 3))
+      result.append(('walk+street_car', self.N, 3))
+
     return result
 
 problem = TransportationProblem(N=10)
