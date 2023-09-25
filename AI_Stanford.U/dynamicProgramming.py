@@ -1,3 +1,4 @@
+#Dynamic programming is backtracking search with memorization
 import sys
 sys.setrecursionlimit(15000)
 class TransportationProblem(object):
