@@ -2,31 +2,36 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 
-# Your email address and password
-YOUR_EMAIL = "cr7@gmail.com"
+# Your email address and Application password (sudo email and and password). This can be gotten from: 
+# 'Manage Google Account' --> Security --> 2- Step verification --> App passwords
+
+YOUR_EMAIL = "aola1967@gmail.com"
 YOUR_PASSWORD = "xxxx xxxx xxxx xxxx"
 
 # The city and country you want the weather for
-CITY = "Toronto"
-COUNTRY = "Ontario"
+CITY = "Ontario"
+COUNTRY = "Canada"
 
 # Get the weather data from the API
-weather_response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={CITY},{COUNTRY}&appid=INPUT API KEYS")
+weather_response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={CITY},{COUNTRY}&appid=API KEY")
 weather_data = weather_response.json()
 
 # Get the air quality data from the API
-air_quality_response = requests.get(f"https://api.airvisual.com/v2/latest?city={CITY},{COUNTRY}&token=INPUT API KEYS")
+air_quality_response = requests.get(f"https://api.openweathermap.org/data/2.5/air_pollution?city={CITY},{COUNTRY}&appid=API KEY")
 air_quality_data = air_quality_response.json()
 
 # Define the email variable
-cr7 = "cr7@gmail.com"
-kipchoge = "Kipchoge@gmail.com"
+aola1967 = "aola1967@gmail.com"
 
+# Please use gmail forwarding rules if you want to forward this to another email address. Gmail is my usecase so that's what I used
 
 weather = weather_data["weather"][0]["main"]
 windspeed = weather_data["wind"]["speed"]
 humidity = weather_data["main"]["humidity"]
-temperature = weather_data["main"]["temp"]
+temperature = weather_data["main"]["temp"] * 9/5 + 32
+
+# This calculates the 'actual feel' temperature using the humidex formula
+actual_feel_temperature = 0.5*(temperature + 61.0 + (temperature - 61.0)*(0.944 + (0.0203*humidity) - (0.0001246*temperature*humidity)))
 
 # Check if the air quality data has a "current" key
 if "current" in air_quality_data:
@@ -37,10 +42,10 @@ else:
     air_quality_index = None
 
 # Create the email message
-message = MIMEText(f"The weather in {CITY}, {COUNTRY} is {weather}. The windspeed is {windspeed} m/s. The humidity is {humidity}%. The temperature is {temperature} degrees fahrenheit. The air quality index is {air_quality_index}.")
+message = MIMEText(f"The weather in {CITY}, {COUNTRY} is {weather}. The windspeed is {windspeed} m/s. The humidity is {humidity}%. The temperature is {temperature} degrees Fahrenheit. The actual feel temperature is {actual_feel_temperature} degrees Fahrenheit. The air quality index is {air_quality_index}.")
 message["Subject"] = "Weather Report"
-message["From"] = cr7
-message["To"] = Kipchoge
+message["From"] = aola1967
+message["To"] = aola1967
 
 # Send the email
 smtp_server = smtplib.SMTP("smtp.gmail.com", 587)
