@@ -9,7 +9,7 @@ YOUR_EMAIL = "aola1967@gmail.com"
 YOUR_PASSWORD = "xxxx xxxx xxxx xxxx"
 
 # The city and country you want the weather for
-CITY = "Ontario"
+CITY = "Toronto"
 COUNTRY = "Canada"
 
 # Get the weather data from the API
