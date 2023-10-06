@@ -23,8 +23,6 @@ air_quality_data = air_quality_response.json()
 # Define the email variable
 aola1967 = "aola1967@gmail.com"
 
-# Please use gmail forwarding rules if you want to forward this to another email address. Gmail is my usecase so that's what I used
-
 weather = weather_data["weather"][0]["main"]
 windspeed = weather_data["wind"]["speed"]
 humidity = weather_data["main"]["humidity"]
@@ -46,6 +44,8 @@ message = MIMEText(f"The weather in {CITY}, {COUNTRY} is {weather}. The windspee
 message["Subject"] = "Weather Report"
 message["From"] = aola1967
 message["To"] = aola1967
+
+# Please use gmail forwarding rules if you want to forward this to another email address. Gmail is my usecase so that's what I used
 
 # Send the email
 smtp_server = smtplib.SMTP("smtp.gmail.com", 587)
