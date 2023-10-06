@@ -2,10 +2,10 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 
-# Your email address and Application password (sudo email and and password). This can be gotten from: 
+# Your email address and Application password (example email and and password). This can be gotten from: 
 # 'Manage Google Account' --> Security --> 2- Step verification --> App passwords
 
-YOUR_EMAIL = "aola1967@gmail.com"
+YOUR_EMAIL = "aolaxxxx@gmail.com"
 YOUR_PASSWORD = "xxxx xxxx xxxx xxxx"
 
 # The city and country you want the weather for
@@ -21,7 +21,7 @@ air_quality_response = requests.get(f"https://api.airvisual.com/v2/latest?city={
 air_quality_data = air_quality_response.json()
 
 # Define the email variable
-aola1967 = "aola1967@gmail.com"
+aolaxxxx = "aolaxxxx@gmail.com"
 
 weather = weather_data["weather"][0]["main"]
 windspeed = weather_data["wind"]["speed"]
@@ -42,8 +42,8 @@ else:
 # Create the email message
 message = MIMEText(f"The weather in {CITY}, {COUNTRY} is {weather}. The windspeed is {windspeed} m/s. The humidity is {humidity}%. The temperature is {temperature} degrees Fahrenheit. The actual feel temperature is {actual_feel_temperature} degrees Fahrenheit. The air quality index is {air_quality_index}.")
 message["Subject"] = "Weather Report"
-message["From"] = aola1967
-message["To"] = aola1967
+message["From"] = aolaxxxx
+message["To"] = aolaxxxx
 
 # Please use gmail forwarding rules if you want to forward this to another email address. Gmail is my usecase so that's what I used
 
