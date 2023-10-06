@@ -17,7 +17,7 @@ weather_response = requests.get(f"https://api.openweathermap.org/data/2.5/weathe
 weather_data = weather_response.json()
 
 # Get the air quality data from the API
-air_quality_response = requests.get(f"https://api.openweathermap.org/data/2.5/air_pollution?city={CITY},{COUNTRY}&appid=API KEY")
+air_quality_response = requests.get(f"https://api.airvisual.com/v2/latest?city={CITY},{COUNTRY}&token=API KEY")
 air_quality_data = air_quality_response.json()
 
 # Define the email variable
