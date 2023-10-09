@@ -25,7 +25,7 @@ class MultiplyingGame(object):
         devil, number = state
         return devil
 
-    #Devils (｀∀´)Ψ programming here means, dogs add is subtract, while dogs multiply is divide
+    #Devil's (｀∀´)Ψ programming here means, dogs add is subtract, while dogs multiply is divide
     
     def succ(self, state, action):
         devil, number = state
