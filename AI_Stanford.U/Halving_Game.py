@@ -23,7 +23,7 @@ class HalvingGame(object):
         god, number = state
         return god
 
-    #God's ☪︎🕎✝️🛐🙏️🥵🥶 programming here means, dogs subtract is subtract, while dogs divide is divide
+#God's ☪️✡️✝️🛐🙏️🥵🥶 programming here means, dogs subtract is subtract, while dogs divide is divide
     
     def succ(self, state, action):
         god, number = state
