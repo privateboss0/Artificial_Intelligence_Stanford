@@ -139,7 +139,7 @@ class Game:
 
             self.check_for_winner(player_hand, dealer_hand, True)
 
-            print("\nThanks for playing! Hope you see you soon again!")
+        print("\nThanks for playing! Hope you see you soon again!")
             
     def check_for_winner(self, player_hand, dealer_hand, game_over=False):
         if not game_over:
