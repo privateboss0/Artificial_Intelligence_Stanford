@@ -80,6 +80,29 @@ class Chips:
     def lose_bet(self):
         self.total -= self.bet
 
+class Cache:
+    def __init__(self):
+        self.cache = {}
+
+    def get(self, key):
+        return self.cache.get(key)
+
+    def set(self, key, value):
+        self.cache[key] = value
+
+cache = Cache()
+# Later, you can get the player's chips from the cache without having to query the database again
+#player_chips = cache.get(player_name)
+# Get the number of chips the player has
+#player_chips = cache.get(player_name)
+
+# If the player's chips are not in the cache, get them from the database but no database in this program sorry!
+#if player_chips is None:
+    #player_chips = get_player_chips_from_database(player_name)
+
+# Set the player's chips in the cache
+cache.set(player_name, player_chips)
+
 def take_bet(player_chips):
   while True:
     try:
@@ -93,6 +116,7 @@ def take_bet(player_chips):
         player_chips.bet = bet_amount
         print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
         break
+    cache.set(player_name, player_chips.total)
     
 def introduction():
     global player_name
@@ -178,13 +202,16 @@ def player_wins(player,dealer,chips):
 def dealer_busts(player,dealer,chips):
     print("Dealer busts!")
     chips.win_bet()
+    cache.set()
 
 def dealer_wins(player,dealer,chips):
     print("Dealer wins!")
     chips.lose_bet()
+    cache.set()
 
 def push(player,dealer,chips):
     print("You have tied with the Dealer! It's a push, your chips have been refunded.")
+    cache.set()
 
 counter = 0
 while True:
