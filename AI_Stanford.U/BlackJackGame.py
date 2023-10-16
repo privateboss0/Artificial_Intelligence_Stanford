@@ -1,4 +1,5 @@
 import random
+#import cache
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 
@@ -90,18 +91,21 @@ class Cache:
     def set(self, key, value):
         self.cache[key] = value
 
+# Create a new Cache object
 cache = Cache()
-# Later, you can get the player's chips from the cache without having to query the database again
-#player_chips = cache.get(player_name)
-# Get the number of chips the player has
-#player_chips = cache.get(player_name)
 
-# If the player's chips are not in the cache, get them from the database but no database in this program sorry!
+# Get the number of chips the player has
+player_chips = cache.get(player_name)
+
+# If the player's chips are not in the cache, get them from the database but no database in this project
 #if player_chips is None:
     #player_chips = get_player_chips_from_database(player_name)
 
 # Set the player's chips in the cache
-cache.set(player_name, player_chips)
+#cache.set(player_name, player_chips)
+
+# Later, you can get the player's chips from the cache without having to query the database again but no database in this project
+#player_chips = cache.get(player_name)
 
 def take_bet(player_chips):
   while True:
