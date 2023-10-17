@@ -1,5 +1,5 @@
 import secrets
-#import cache
+import cache
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 
@@ -105,24 +105,33 @@ player_chips = cache.get(player_name)
     #player_chips = get_player_chips_from_database(player_name)
 
 # Set the player's chips in the cache
-#cache.set(player_name, player_chips)
+cache.set(player_name, player_chips)
 
 # Later, player chips can be called without having to query the database again but no database in this project
-#player_chips = cache.get(player_name)
+player_chips = cache.get(player_name)
 
-def take_bet(player_chips):
+def validate_bet(player_chips):
+
   while True:
     try:
       bet_amount = int(input('How many chips would you like to bet?: '))
     except ValueError:
       print('\nSorry, the number of chips must be a number!')
     else:
-      if bet_amount > player_chips.total:
-        print(f"\nSorry, your bet can't exceed {player_chips.total} chips.")
+      if bet_amount > 0 and bet_amount <= player_chips.total:
+        return bet_amount
       else:
-        player_chips.bet = bet_amount
-        print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
-        break
+        print(f"\nSorry, your bet can't exceed {player_chips.total} chips.")
+
+def take_bet(player_chips):
+  bet_amount = None
+  while bet_amount is None:
+    bet_amount = validate_bet(player_chips)
+
+  player_chips.bet = bet_amount
+  print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
+
+  return player_chips.bet
     #cache.set(player_name, player_chips.total)
     
 def introduction():
