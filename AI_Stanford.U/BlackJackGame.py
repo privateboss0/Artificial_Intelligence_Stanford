@@ -120,7 +120,7 @@ def take_bet(player_chips):
         player_chips.bet = bet_amount
         print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
         break
-    cache.set(player_name, player_chips.total)
+    #cache.set(player_name, player_chips.total)
     
 def introduction():
     global player_name
@@ -206,16 +206,13 @@ def player_wins(player,dealer,chips):
 def dealer_busts(player,dealer,chips):
     print("Dealer busts!")
     chips.win_bet()
-    cache.set()
 
 def dealer_wins(player,dealer,chips):
     print("Dealer wins!")
     chips.lose_bet()
-    cache.set()
 
 def push(player,dealer,chips):
     print("You have tied with the Dealer! It's a push, your chips have been refunded.")
-    cache.set()
 
 counter = 0
 while True:
