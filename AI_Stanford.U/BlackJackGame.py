@@ -124,6 +124,7 @@ def validate_bet(player_chips):
         print(f"\nSorry, your bet can't exceed {player_chips.total} chips.")
 
 def take_bet(player_chips):
+  global bet_amount
   bet_amount = None
   while bet_amount is None:
     bet_amount = validate_bet(player_chips)
@@ -132,7 +133,7 @@ def take_bet(player_chips):
   print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
 
   return player_chips.bet
-    #cache.set(player_name, player_chips.total)
+#cache.set(player_name, player_chips.total)
     
 def introduction():
     global player_name
@@ -141,14 +142,17 @@ def introduction():
 
 def next_round():
     global player_name
+    global bet_amount
     print("let's go another round! ")
 
 def chip_count():
     global player_name
+    global bet_amount
     print(f"{player_name}, your current chip count stands at {player_chips.total}")
 
 def play_again():
     global player_name
+    global bet_amount
     global playing
     while True:
         replay = input(f"{player_name}, would you like to play another round?: ").upper()
@@ -163,6 +167,7 @@ def play_again():
 
 def total():
     global player_name
+    global bet_amount
     while True:
         try:
             total = int(input(f'Hello {player_name}, how many chips will you be using this game?: '))
@@ -179,6 +184,7 @@ def hit(deck,Dream):
 
 def hit_or_stand(deck,Dream):
     global player_name
+    global bet_amount
     global playing
     while True:
         response = input(f"{player_name}, Would you like to hit or stand?: ")
