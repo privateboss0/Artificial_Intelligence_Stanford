@@ -118,10 +118,10 @@ def validate_bet(player_chips):
     except ValueError:
       print('\nSorry, the number of chips must be a number!')
     else:
-      if bet_amount > 0 and bet_amount <= player_chips.total:
+      if bet_amount == 0 and bet_amount <= player_chips.total:
         return bet_amount
       else:
-        print(f"\nSorry, your bet can't exceed {player_chips.total} chips.")
+        print(f"\nSorry, your bet amount is below your {player_chips.total} count.")
 
 def take_bet(player_chips):
   global bet_amount
