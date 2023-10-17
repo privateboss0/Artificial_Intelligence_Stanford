@@ -1,4 +1,4 @@
-import random
+import secrets
 #import cache
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
@@ -38,7 +38,7 @@ class Deck:
         self.deck = []
         for suit in suits:
             for rank in ranks:
-                self.deck.append(Game(suit,rank))
+                self.deck.append(Game(suit, rank))
 
     def __str__(self):
         deck_comp = ''
@@ -47,7 +47,10 @@ class Deck:
         return 'The deck has:' + deck_comp
 
     def shuffle(self):
-        random.shuffle(self.deck)
+        # Shuffle the deck using the secrets module
+        for i in range(len(self.deck) - 1):
+            random_index = secrets.randbelow(len(self.deck) - i) + i
+            self.deck[i], self.deck[random_index] = self.deck[random_index], self.deck[i]
 
     def deal(self):
         single_card = self.deck.pop()
@@ -97,14 +100,14 @@ cache = Cache()
 # Get the number of chips the player has
 player_chips = cache.get(player_name)
 
-# If the player's chips are not in the cache, get them from the database but no database in this project
+# If the player's chips are not in the cache, Then get them from the database but no database in this project catch will remain empty
 #if player_chips is None:
     #player_chips = get_player_chips_from_database(player_name)
 
 # Set the player's chips in the cache
 #cache.set(player_name, player_chips)
 
-# Later, you can get the player's chips from the cache without having to query the database again but no database in this project
+# Later, player chips can be called without having to query the database again but no database in this project
 #player_chips = cache.get(player_name)
 
 def take_bet(player_chips):
@@ -245,7 +248,7 @@ while True:
             player_busts(player_hand,dealer_hand,player_chips)
             break
         
-    if player_hand.value <= 21:
+    if player_hand.value in range(0, 22):
         while dealer_hand.value < 17:
             hit(deck,dealer_hand)
         show_all(player_hand,dealer_hand)
