@@ -118,17 +118,20 @@ def validate_bet(player_chips):
     except ValueError:
       print('\nSorry, the number of chips must be a number!')
     else:
-      if bet_amount == 0 and bet_amount <= player_chips.total:
+      if bet_amount > player_chips.total:
+        print(f"\nSorry, your bet amount is greater than your current chip count of {player_chips.total}.")
+        continue
+      if bet_amount <= player_chips.total:
         return bet_amount
       else:
         print(f"\nSorry, your bet amount is below your {player_chips.total} count.")
-
 def take_bet(player_chips):
   global bet_amount
   bet_amount = None
   while bet_amount is None:
     bet_amount = validate_bet(player_chips)
 
+  bet_amount = validate_bet(player_chips)
   player_chips.bet = bet_amount
   print(f"\nYour bet of {player_chips.bet} chips has been accepted - good luck!")
 
