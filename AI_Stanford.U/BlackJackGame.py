@@ -122,6 +122,7 @@ def validate_bet(player_chips):
         print(f"\nSorry, your bet amount is greater than your current chip count of {player_chips.total}.")
         continue
       if bet_amount <= player_chips.total:
+        print(f"\n LETS GO get this BETMONEY!!. Confirm your BET amount again .")
         return bet_amount
       else:
         print(f"\nSorry, your bet amount is below your {player_chips.total} count.")
