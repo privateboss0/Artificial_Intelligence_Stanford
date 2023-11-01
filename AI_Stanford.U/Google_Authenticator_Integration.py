@@ -1,7 +1,6 @@
 import time
 import pyotp
 import qrcode
-import Recovery_Code_App
 
 secretkey = "PublicPrivate"
 
