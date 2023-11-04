@@ -93,7 +93,7 @@ def advance_state_machine():
     time.sleep(3) #Stimulating approximately 30seconds
     light_box_state = "green"
 
-# Turn on the light for the red state.
+# Turn on the light for the green state.
   elif light_box_state == "green":
     draw_circle(15, 15, 30, "black", "")
     draw_circle(15, -75, 30, "black", "")
@@ -101,6 +101,7 @@ def advance_state_machine():
     time.sleep(6) #Stimulating approximately 60seconds
     light_box_state = "yellow"
   
+  # Turn on the light for the yellow state.
   else:
     light_box_state = "yellow"
     draw_circle(15, 15, 30, "black", "")
@@ -110,6 +111,5 @@ def advance_state_machine():
     light_box_state = "red"
 
   window.ontimer(advance_state_machine, 2000)
-
 advance_state_machine()
 window.mainloop()
