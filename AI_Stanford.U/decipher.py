@@ -9,7 +9,7 @@ startProbs = [1.0 / K for h in range(K)]
 
 # transitionProbs[h1][h2] = p_trans(h2 | h1)
 transitionCounts = [[0 for h2 in range(K)] for h1 in range(K)]
-rawText = util_cryptography.toIntSeq(util_cryptography.readText('C:\\Users\\Francis Ayinde\\Python files\\train.txt'))
+rawText = util_cryptography.toIntSeq(util_cryptography.readText('C:\\Users\\Ishola Francis Ayinde\\Python files\\train.txt'))
 for i in range(len(rawText) - 1):
     h1 = rawText[i]
     h2 = rawText[i + 1]
@@ -21,7 +21,7 @@ emissionProbs = [[1.0 / K for e in range(K)] for h in range(K)]
 
 ### Run EM
 
-observations = util_cryptography.toIntSeq(util_cryptography.readText('C:\\Users\\Francis Ayinde\\Python files\\ciphertext.txt'))
+observations = util_cryptography.toIntSeq(util_cryptography.readText('C:\\Users\\Ishola Francis Ayinde\\Python files\\ciphertext.txt'))
 
 for t in range(200):
     # E-step
