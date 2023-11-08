@@ -8,5 +8,5 @@ Uniform_Resource_Identifier = pyotp.totp.TOTP(secretkey).provisioning_uri(name="
 
 print(Uniform_Resource_Identifier)
 
-#Make and download the QRcode for Privateboss_App to use with Google Authenticator app or others
+#Make and download the QRcode for Privateboss_App to use with Google Authenticator app.
 qrcode.make(Uniform_Resource_Identifier).save("totp.png")
