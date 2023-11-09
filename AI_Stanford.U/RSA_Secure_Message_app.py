@@ -1,4 +1,4 @@
-# This program encrypts and decrypts messages using RSA encryption.
+# This program encrypts and decrypts messages using RSA encryption or (Asymmetric encryption).
 # To use the program, simply run it and enter your message when prompted.
 # The program will then generate a public and private key pair. The public
 # key will be used to encrypt the message, and the private key will be used
