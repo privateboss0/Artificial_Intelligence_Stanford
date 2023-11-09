@@ -76,7 +76,7 @@ try:
     modulusSize = int(sys.argv[1])
         
 except:
-    modulusSize = 2048
+    modulusSize = 2048   #4096 was implemented but message takes a minutes to transmit due to local computational power
 
 msg = str(input('Type your secure message and press Enter: '))
 
