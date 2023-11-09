@@ -1,3 +1,10 @@
+# This program encrypts and decrypts messages using RSA encryption.
+# To use the program, simply run it and enter your message when prompted.
+# The program will then generate a public and private key pair. The public
+# key will be used to encrypt the message, and the private key will be used
+# to decrypt it. Once the message is encrypted, you can share it with anyone.
+# To decrypt the message, the receiver will need to have the private key.
+
 import math
 from math import gcd
 import secrets
@@ -103,5 +110,6 @@ print("\nInteger encoded message:\n\t", encodedMsg)
 print("\nEncrypted message( C(M) = M^e % n ):\n\t", encryptedMsg)
 print("\nDecrypted message( M(C) = C^d % n ):\n\t", decryptedMsg)
 if encodedMsg == decryptedMsg:
-    print("Secured message from sender:", msg)
+    print("Secured message from sender: ", msg)
+    #print("Secured message from sender: ", decryptedMsg)
     #print("\nSecure message transmitted!. Decrypted message and original Encoded message is a match")
