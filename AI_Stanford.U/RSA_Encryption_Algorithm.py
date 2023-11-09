@@ -76,9 +76,9 @@ try:
     modulusSize = int(sys.argv[1])
         
 except:
-    modulusSize = 2048 #4096 was used but message delivery was slow(9mins) due to computational power
+    modulusSize = 2048
 
-msg = "We the best!"
+msg = str(input('Type your secure message and press Enter: '))
 
 primeSize = modulusSize // 2
 p = getSecretsPrime(primeSize)
