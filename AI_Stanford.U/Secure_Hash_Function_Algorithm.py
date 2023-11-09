@@ -12,19 +12,16 @@ def encodeMessage(msg):
     return encodedMsg
 
 def sha3_384(data):
-
   h = hashlib.sha3_384()
   h.update(data)
   return h.hexdigest()
 
 def sha3_512(data):
-
   h = hashlib.sha3_512()
   h.update(data)
   return h.hexdigest()
 
 def blake2b(data):
-
   h = hashlib.blake2b()
   h.update(data)
   return h.hexdigest()
