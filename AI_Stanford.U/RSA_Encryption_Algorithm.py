@@ -76,7 +76,7 @@ try:
     modulusSize = int(sys.argv[1])
         
 except:
-    modulusSize = 2048   #4096 was implemented but message takes a minutes to transmit due to local computational power
+    modulusSize = 2048
 
 msg = str(input('Type your secure message and press Enter: '))
 
@@ -103,4 +103,5 @@ print("\nInteger encoded message:\n\t", encodedMsg)
 print("\nEncrypted message( C(M) = M^e % n ):\n\t", encryptedMsg)
 print("\nDecrypted message( M(C) = C^d % n ):\n\t", decryptedMsg)
 if encodedMsg == decryptedMsg:
-    print("\nSecure message transmitted!. Decrypted message and original Encoded message is a match")
+    print("Secured message from sender:", msg)
+    #print("\nSecure message transmitted!. Decrypted message and original Encoded message is a match")
