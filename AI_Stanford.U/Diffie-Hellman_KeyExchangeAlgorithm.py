@@ -9,6 +9,7 @@ def prime_checker(p):
             if p % i == 0:
                 return -1
         return 1
+
 def primitive_check(g, p):
     L = []
     
@@ -18,8 +19,8 @@ def primitive_check(g, p):
         if L.count(i) > 1:
             L.clear()
             return -1
-        return 1
-"""Generate a secure random prime number, I Limited this to 7000(13 prime number bits) due to my local cumputing power.
+        return 1       
+"""Generate a secure random prime number, I Limited this to 7000(13 prime number bits) due to my local computing power.
    Larger prime numbers also require more computational power to generate and use, so there is a trade-off between security and performance.
    768 prime bits is good, 1024 is better, 2048 is best excluding quantum computational power maturity."""
 
