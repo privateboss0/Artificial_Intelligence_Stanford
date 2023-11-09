@@ -1,5 +1,5 @@
 """ This program takes an input and performs a one way hash function to ensure integrity using the 
-latest standard of the algorithm which are SHA3-384, SHA3-512 and Blake2b. """
+latest standard of the algorithm which are SHA3-384, SHA3-512 and Blake2b. You only need to run the program"""
 
 import hashlib
 
