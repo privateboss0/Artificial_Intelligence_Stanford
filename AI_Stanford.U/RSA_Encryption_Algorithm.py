@@ -76,7 +76,7 @@ try:
     modulusSize = int(sys.argv[1])
         
 except:
-    modulusSize = 1024
+    modulusSize = 2048 #4096 was used but message delivery was slow(9mins) due to computational power
 
 msg = "We the best!"
 
