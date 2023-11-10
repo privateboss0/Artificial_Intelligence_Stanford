@@ -2,7 +2,7 @@ import time
 import pyotp
 import qrcode
 
-secretkey = "PublicPrivate"
+secretkey = "PrivatePublic1679@#"
 
 counter = 0
 
