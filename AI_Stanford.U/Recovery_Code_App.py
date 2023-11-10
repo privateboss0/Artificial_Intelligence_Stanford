@@ -1,7 +1,7 @@
 import time
 import pyotp
 
-secretkey = "PublicPrivate"
+secretkey = "PrivatePublic1679@#"
 # Either selecting line 4 or using a random key kept by service provider: skey = pyotp.random_base32()
 
 counter = 0
