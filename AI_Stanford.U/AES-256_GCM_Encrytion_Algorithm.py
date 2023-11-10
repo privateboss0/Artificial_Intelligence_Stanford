@@ -1,3 +1,6 @@
+"""This algorithm encrypts, decrypts and verifies the integrity of any message using AES-256-GCM (Symmetric encryption)
+ to ensure confidentiality and authenticity of the information except with verified identities with shared/secret key"""
+
 import base64
 import hashlib
 from Crypto.Cipher import AES
@@ -28,8 +31,8 @@ def decrypt(password, cipher_message):
     salt = decoded_cipher_byte[:SALT_LENGTH]
     iv = decoded_cipher_byte[SALT_LENGTH : (SALT_LENGTH + IV_LENGTH)]
     encrypted_message_byte = decoded_cipher_byte[
-        (SALT_LENGTH + IV_LENGTH) : -TAG_LENGTH
-    ]
+        (SALT_LENGTH + IV_LENGTH) : -TAG_LENGTH ]
+    
     tag = decoded_cipher_byte[-TAG_LENGTH:]
 
     secret = get_secret_key(password, salt)
@@ -40,19 +43,18 @@ def decrypt(password, cipher_message):
 
 def get_secret_key(password, salt):
     return hashlib.pbkdf2_hmac(
-        HASH_NAME, password.encode(), salt, ITERATION_COUNT, KEY_LENGTH
-    )
+        HASH_NAME, password.encode(), salt, ITERATION_COUNT, KEY_LENGTH)
 
 secret_key = "PrivatePublic1679@#"
 plain_text = (input('Type in your message: '))
 
-print("------ AES-256_GCM Encryption ------")
+print("------ AES256-GCM Encryption ------")
 cipher_text = encrypt(secret_key, plain_text)
 print("encryption input ",  ":", plain_text)
 print("encryption output ", ":", cipher_text)
 
 decrypted_text = decrypt(secret_key, cipher_text)
 
-print("\n------ AES-256_GCM Decryption ------")
+print("\n------ AES256-GCM Decryption ------")
 print("decryption input ",  ":", cipher_text)
 print("decryption output ", ":", decrypted_text)
