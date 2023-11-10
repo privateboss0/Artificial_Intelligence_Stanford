@@ -2,7 +2,7 @@ import time
 import pyotp
 import qrcode
 
-secretkey = "PublicPrivate"
+secretkey = "PrivatePublic1679@#"
 
 Uniform_Resource_Identifier = pyotp.totp.TOTP(secretkey).provisioning_uri(name="Aola", issuer_name= "Privateboss_App")
 
