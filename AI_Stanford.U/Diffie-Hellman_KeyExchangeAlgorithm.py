@@ -36,18 +36,13 @@ while True:
     if primitive_check(G, P) == -1:
         continue
     break
-
 L = []  # Initialize the L list
 
-# Generate secure and random private keys
-x1 = secrets.randbelow(P - 1)  
-x2 = secrets.randbelow(P - 1)
+x1 = secrets.randbelow(P - 1)  # Generate secure and random private keys
+x2 = secrets.randbelow(P - 1)  # Generate secure and random private keys
 
-# Calculate Public Keys
-y1, y2 = pow(G, x1) % P, pow(G, x2) % P
-
-# Generate Secret Keys
-k1, k2 = pow(y2, x1) % P, pow(y1, x2) % P
+y1, y2 = pow(G, x1) % P, pow(G, x2) % P    # Calculate Public Keys
+k1, k2 = pow(y2, x1) % P, pow(y1, x2) % P  # Generate Secret Keys
 
 print(f"\nSecret Key For Bob Is {k1}\nSecret Key For Alice Is {k2}\n")
 
