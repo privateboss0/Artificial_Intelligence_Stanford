@@ -4,24 +4,19 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 
 ITERATION_COUNT = 65536
-HASH_NAME = "blake2b" #BLAKE2 is a cryptographic hash function faster than MD5, 
-#SHA-1, SHA-2, and SHA-3, yet it is belived to be as secure as the latest standard SHA-3.
-IV_LENGTH = 12           #96bits
-KEY_LENGTH = 32          #256bits
-SALT_LENGTH = 16         #128bits
-TAG_LENGTH = 16          #128bits
-
+HASH_NAME = "sha3_512"
+SALT_LENGTH = 48  #384bits
+IV_LENGTH = 16    #128bits
+KEY_LENGTH = 32   #256bits
+TAG_LENGTH = 16   #128bits
 def encrypt(password, plain_message):
-    salt = get_random_bytes(SALT_LENGTH) 
+    salt = get_random_bytes(SALT_LENGTH)
     iv = get_random_bytes(IV_LENGTH)
 
     secret = get_secret_key(password, salt)
-
     cipher = AES.new(secret, AES.MODE_GCM, iv)
 
-    encrypted_message_byte, tag = cipher.encrypt_and_digest(
-        plain_message.encode("utf-8")
-    )
+    encrypted_message_byte, tag = cipher.encrypt_and_digest(plain_message.encode("utf-8"))
     cipher_byte = salt + iv + encrypted_message_byte + tag
 
     encoded_cipher_byte = base64.b64encode(cipher_byte)
@@ -33,9 +28,10 @@ def decrypt(password, cipher_message):
     salt = decoded_cipher_byte[:SALT_LENGTH]
     iv = decoded_cipher_byte[SALT_LENGTH : (SALT_LENGTH + IV_LENGTH)]
     encrypted_message_byte = decoded_cipher_byte[
-        (IV_LENGTH + SALT_LENGTH) : -TAG_LENGTH
+        (SALT_LENGTH + IV_LENGTH) : -TAG_LENGTH
     ]
     tag = decoded_cipher_byte[-TAG_LENGTH:]
+
     secret = get_secret_key(password, salt)
     cipher = AES.new(secret, AES.MODE_GCM, iv)
 
@@ -50,13 +46,13 @@ def get_secret_key(password, salt):
 secret_key = "PrivatePublic1679@#"
 plain_text = (input('Type in your message: '))
 
-print("------ AES256-GCM Encryption ------")
+print("------ AES-256_GCM Encryption ------")
 cipher_text = encrypt(secret_key, plain_text)
 print("encryption input ",  ":", plain_text)
 print("encryption output ", ":", cipher_text)
 
 decrypted_text = decrypt(secret_key, cipher_text)
 
-print("\n------ AES256-GCM Decryption ------")
+print("\n------ AES-256_GCM Decryption ------")
 print("decryption input ",  ":", cipher_text)
 print("decryption output ", ":", decrypted_text)
