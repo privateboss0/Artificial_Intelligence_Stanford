@@ -53,7 +53,7 @@ light_box_state = ""
 window.ontimer(lambda: draw_circle(15, 15, 30, "black", ""), )
 window.ontimer(lambda: draw_circle(15, -75, 30, "black", ""), )
 
-# Call the state machine every 1000 milliseconds
+# Call the machine every 1000 milliseconds
 def advanced_machine():
   global light_box_state
 
