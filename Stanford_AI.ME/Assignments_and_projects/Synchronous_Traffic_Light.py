@@ -1,9 +1,9 @@
-#This program allows the synchronous direction of vehicles for a single, double, triple or multiple lane decentralized system
+#This program allows the synchronous direction of pedestrians/vehicles for a single, double, triple or multiple lane decentralized system
 import turtle
 import time
 
 window = turtle.Screen()
-window.title("1 Turn traffic light")
+window.title("Synchronous Traffic Light")
 window.bgcolor("black")
 window.tracer(0)
 
@@ -22,7 +22,7 @@ for side in range(4):
     pen.right(90)
 pen.penup()
 
-# Move the turtle down and draw the second box
+# Draw the second box
 pen.goto(-30, 00)
 pen.pendown()
 for side in range(4):
@@ -30,7 +30,7 @@ for side in range(4):
     pen.right(90)
 pen.penup()
 
-# Move the turtle down and draw the third box
+# Draw the third box
 pen.goto(-30, -90)
 pen.pendown()
 for side in range(4):
