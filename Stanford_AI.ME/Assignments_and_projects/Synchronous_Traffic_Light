@@ -1,4 +1,4 @@
-#This program allows the synchronous direction of traffic for a single, double, triple or multiple lane decentralized system
+#This program allows the synchronous direction of vehicles for a single, double, triple or multiple lane decentralized system
 import turtle
 import time
 
