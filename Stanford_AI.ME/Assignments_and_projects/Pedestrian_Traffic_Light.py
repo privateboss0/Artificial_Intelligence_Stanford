@@ -54,7 +54,7 @@ window.ontimer(lambda: draw_circle(15, 15, 30, "black", ""), )
 window.ontimer(lambda: draw_circle(15, -75, 30, "black", ""), )
 
 # Call the state machine every 1000 milliseconds
-def advanced_state_machine():
+def advanced_machine():
   global light_box_state
 
   draw_circle(15, 15, 30, "black", "")
@@ -81,6 +81,6 @@ def advanced_state_machine():
     time.sleep(11) #Stimulating approximately 110seconds
     light_box_state = "red"
 
-  window.ontimer(advanced_state_machine, 2000)
-advanced_state_machine()
+  window.ontimer(advanced_machine, 2000)
+advanced_machine()
 window.mainloop()
