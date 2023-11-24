@@ -1,8 +1,9 @@
+#This program allows the synchronous direction of traffic for a single, double, triple or multiple lane decentralized system
 import turtle
 import time
 
 window = turtle.Screen()
-window.title("1 lane traffic light")
+window.title("1 Turn traffic light")
 window.bgcolor("black")
 window.tracer(0)
 
@@ -15,7 +16,7 @@ pen.penup()
 
 # Draw the first box
 pen.goto(-30, 90)
-pen.pendown()
+pen.pendown() 
 for side in range(4):
     pen.forward(90)
     pen.right(90)
@@ -66,7 +67,6 @@ window.ontimer(lambda: draw_circle(15, -160, 30, "black", ""), )
 
 # Call the state machine every 1000 milliseconds
 def advanced_state_machine():
-
   global light_box_state
 
   draw_circle(15, 15, 30, "black", "")
@@ -103,7 +103,7 @@ def advanced_state_machine():
   
   # Turn on the light for the green state.
   else:
-    light_box_state = "yellow"
+    light_box_state == "yellow"
     draw_circle(15, 15, 30, "black", "")
     draw_circle(15, -75, 30, "black", "yellow")
     draw_circle(15, -160, 30, "black", "")
