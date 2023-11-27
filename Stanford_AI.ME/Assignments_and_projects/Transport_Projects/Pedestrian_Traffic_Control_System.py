@@ -1,4 +1,4 @@
-#This program allows Bikes, Pedestrian and Disabled humans to safely cross the road.
+#This program allows Bikes, Pedestrian and Disabled humans to cross the road safely.
 import turtle
 import time
 
@@ -43,7 +43,7 @@ def draw_circle(x, y, size, fill, color):
 def turn_off_red_light():
   draw_circle(15, 15, 30, "grey", "black")
 
-def turn_off_green_light():
+def turn_off_white_light():
   draw_circle(15, -75, 30, "grey", "black")
 
 # This variable holds the current state of the machine
@@ -61,23 +61,23 @@ def advanced_machine():
   draw_circle(15, -75, 30, "black", "")
 
   if light_box_state =="red":
-    turn_off_green_light()
+    turn_off_white_light()
 
-  if light_box_state == "green":
+  if light_box_state == "white":
     turn_off_red_light()
 
-  # Turn on the light for the green state.
+  # Turn on the light for the white state.
   if light_box_state == "red":
     draw_circle(15, 15, 30, "black", "red")
     draw_circle(15, -75, 30, "black", "")
     time.sleep(5) #Stimulating approximately 50seconds
-    light_box_state = "green"
+    light_box_state = "white"
 
 # Turn on the light for the red state.
   else:
-    light_box_state == "green"
+    light_box_state == "white"
     draw_circle(15, 15, 30, "black", "")
-    draw_circle(15, -75, 30, "black", "green")
+    draw_circle(15, -75, 30, "black", "white")
     time.sleep(11) #Stimulating approximately 110seconds
     light_box_state = "red"
 
