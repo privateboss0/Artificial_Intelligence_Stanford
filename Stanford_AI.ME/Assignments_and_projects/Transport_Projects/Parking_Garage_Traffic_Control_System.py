@@ -49,14 +49,14 @@ def advanced():
   if light_box_state =="green":
       turn_off_red_light()
       draw_circle(15, 15, 30, "grey", "green")
-      time.sleep(7) #Simulating 50 seconds for red light
+      time.sleep(7) #Simulating 70 seconds for red light
       light_box_state = "red"
 
   else:
     light_box_state == "red"
     turn_off_green_light()
     draw_circle(15, 15, 30, "grey", "red")
-    time.sleep(15) #Simulating 100 seconds for green light
+    time.sleep(15) #Simulating 150 seconds for green light
     light_box_state = "green"
 
   window.ontimer(advanced, 2000)
