@@ -167,7 +167,7 @@ def state_advanced_machine():
     draw_circle(30, 15, 30, "black", "red")
     draw_circle(30, -75, 30, "black", "")
     draw_circle(30, -160, 30, "black", "")
-    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying by 3 for the 3 traffic lights
+    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying/adding3 for the 3 traffic lights
     
     light_box_state0 = "green"
 
@@ -176,7 +176,7 @@ def state_advanced_machine():
     draw_circle(30, 15, 30, "black", "")
     draw_circle(30, -75, 30, "black", "")
     draw_circle(30, -160, 30, "black", "green")
-    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying by 3 for the 3 traffic lights
+    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying/adding 3 for each of the 3 traffic lights
     
     light_box_state0 = "yellow"
   
@@ -186,7 +186,7 @@ def state_advanced_machine():
     draw_circle(30, 15, 30, "black", "")
     draw_circle(30, -75, 30, "black", "yellow")
     draw_circle(30, -160, 30, "black", "")
-    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying by 3 for the 3 traffic lights
+    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying/adding 3 for each of the 3 traffic lights
     light_box_state0 = "red"
 
 def advanced_state_machine():
@@ -213,7 +213,7 @@ def advanced_state_machine():
     draw_circle(165, 15, 30, "black", "red")
     draw_circle(165, -75, 30, "black", "")
     draw_circle(165, -160, 30, "black", "")
-    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying by 3 for the 3 traffic lights
+    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying/adding 3 for each of the 3 traffic lights
     
     light_box_state1 = "green"
 
@@ -222,7 +222,7 @@ def advanced_state_machine():
     draw_circle(165, 15, 30, "black", "")
     draw_circle(165, -75, 30, "black", "")
     draw_circle(165, -160, 30, "black", "green")
-    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying by 3 for the 3 traffic lights
+    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying/adding 3 for each of the 3 traffic lights
     
     light_box_state1 = "yellow"
   
@@ -232,7 +232,7 @@ def advanced_state_machine():
     draw_circle(165, 15, 30, "black", "")
     draw_circle(165, -75, 30, "black", "yellow")
     draw_circle(165, -160, 30, "black", "")
-    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying by 3 for the 3 traffic lights
+    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying/adding 3 for each of the 3 traffic lights
     light_box_state1 = "red"
 
 def machine_advanced_state():
@@ -259,7 +259,7 @@ def machine_advanced_state():
     draw_circle(-105, 15, 30, "black", "red")
     draw_circle(-105, -75, 30, "black", "")
     draw_circle(-105, -160, 30, "black", "")
-    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying by 3 for the 3 traffic lights
+    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying/adding 3 for each of the 3 traffic lights
     
     light_box_state2 = "green"
 
@@ -268,7 +268,7 @@ def machine_advanced_state():
     draw_circle(-105, 15, 30, "black", "")
     draw_circle(-105, -75, 30, "black", "")
     draw_circle(-105, -160, 30, "black", "green")
-    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying by 3 for the 3 traffic lights
+    time.sleep(2) #Stimulating approximately 30seconds for red light by multiplying/adding 3 for each of the 3 traffic lights
     
     light_box_state2 = "yellow"
   
@@ -278,7 +278,7 @@ def machine_advanced_state():
     draw_circle(-105, 15, 30, "black", "")
     draw_circle(-105, -75, 30, "black", "yellow")
     draw_circle(-105, -160, 30, "black", "")
-    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying by 3 for the 3 traffic lights
+    time.sleep(3) #Stimulating approximately 90seconds for green light by multiplying/adding 3 for each of the 3 traffic lights
     light_box_state2 = "red"
 
   window.ontimer(advanced_state_machine, 2000)
