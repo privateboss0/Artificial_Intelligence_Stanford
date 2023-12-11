@@ -1,6 +1,6 @@
-                                            PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM
+                                        PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM(Transport Project)
 
-I built multiple traffic control systems to allow free, organized and safe movement of humans, drivers and motor vehicles . They were as follows:
+In respect with the modernization and digitalization of the traffic control infrastructure, I designed and built multiple traffic control systems utilizing python code to allow free, organized and safe movement of humans, drivers and motor vehicles . They are as follows:
 
 -Parking Garage Traffic Control System: A single light box, alternating between Red(STOP) and Green(GO) lights to allow safe and organized movement of cars and drivers in an automated parking garage.
 
