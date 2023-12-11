@@ -1,5 +1,5 @@
-"""This program allows the single,synchronous or Asynchronous direction of vehicles for a single, double, triple or multiple lane 
-  decentralized system by having multiple instances of the code running seperately"""
+"""This program allows the decentralized (single,synchronous or Asynchronous) control of motor vehicles for a single, double, triple or multiple lane 
+   decentralized system by having multiple instances of the code running seperately."""
 
 import turtle
 import time
