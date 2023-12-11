@@ -51,14 +51,13 @@ def turn_off_red_light():
 def turn_off_white_light():
   draw_circle(15, -75, 30, "grey", "black")
 
-# This variable holds the current state of the machine
+# This variable is a placeholder for the current state of light
 light_box_state = ""
 
 # Set timers for the light durations
 window.ontimer(lambda: draw_circle(15, 15, 30, "black", ""), )
 window.ontimer(lambda: draw_circle(15, -75, 30, "black", ""), )
 
-# Call the machine every 1000 milliseconds
 def advanced_machine():
   global light_box_state
 
