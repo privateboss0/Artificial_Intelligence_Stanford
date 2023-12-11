@@ -1,4 +1,4 @@
-                                        PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM(Transport Project)
+                        PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM(Transport Project)
 
 In respect with the modernization and digitalization of the traffic control infrastructure in 2023, I designed and built multiple traffic control systems utilizing python code to allow free, organized and safe movement of humans, drivers and motor vehicles . They are as follows:
 
