@@ -1,4 +1,4 @@
-#This program allows the synchronous direction of pedestrians/vehicles for a triple lane centralized system.
+#This program allows the synchronous direction of vehicles for a triple lane centralized system.
 import turtle
 import time
 
