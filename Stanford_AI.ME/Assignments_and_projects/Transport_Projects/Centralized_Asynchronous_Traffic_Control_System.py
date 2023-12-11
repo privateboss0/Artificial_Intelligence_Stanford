@@ -3,7 +3,7 @@ import turtle
 import time
 
 window = turtle.Screen()
-window.title("Asynchronous Traffic Light")
+window.title("Centralized Asynchronous Traffic Light")
 window.bgcolor("black")
 window.tracer(0)
 
