@@ -1,6 +1,8 @@
-#This program allows disabled/wheelchair humans, pedestrians, bikers, skaters etc. to cross the road safely.
+#https://pixabay.com/sound-effects/search/traffic-signal/ for blind pedestrian crossing sound
+#This program allows disabled/wheelchair, blind, pedestrians, bikers, skaters etc. to cross the road safely.
 import turtle
 import time
+from playsound import playsound
 
 window = turtle.Screen()
 window.title("Pedestrian Traffic Light")
@@ -40,6 +42,9 @@ def draw_circle(x, y, size, fill, color):
         turtle.circle(size)
         turtle.end_fill()
 
+def play_alarm():
+  playsound ('C:\\Users\\Ishola Francis Ayinde\\Python files\\blind-traffic-light-pedestrian-crossing-sounds.mp3')
+
 def turn_off_red_light():
   draw_circle(15, 15, 30, "grey", "black")
 
@@ -60,6 +65,9 @@ def advanced_machine():
   draw_circle(15, 15, 30, "black", "")
   draw_circle(15, -75, 30, "black", "")
 
+  if light_box_state == "red":
+    play_alarm()
+
   if light_box_state =="red":
     turn_off_white_light()
 
@@ -70,7 +78,9 @@ def advanced_machine():
   if light_box_state == "red":
     draw_circle(15, 15, 30, "black", "red")
     draw_circle(15, -75, 30, "black", "")
-    time.sleep(5) #Stimulating approximately 50seconds
+    time.sleep(15) #Stimulating approximately 150seconds for white light. My Computing limitations to play the sound, draw circles and turn on light concurrently while running the other aspect 
+                    #of the algorithm drags the timer for 10 extra seconds. but should be fine on a faster computer with more processing power and memory
+    
     light_box_state = "white"
 
 # Turn on the light for the red state.
@@ -78,7 +88,8 @@ def advanced_machine():
     light_box_state == "white"
     draw_circle(15, 15, 30, "black", "")
     draw_circle(15, -75, 30, "black", "white")
-    time.sleep(11) #Stimulating approximately 110seconds
+    time.sleep(20) #Stimulating approximately 200seconds for red light
+    
     light_box_state = "red"
 
   window.ontimer(advanced_machine, 2000)
