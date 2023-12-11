@@ -5,7 +5,7 @@ import turtle
 import time
 
 window = turtle.Screen()
-window.title("Traffic Light")
+window.title("General Traffic Light")
 window.bgcolor("black")
 window.tracer(0)
 
