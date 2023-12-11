@@ -1,9 +1,9 @@
-#This program allows the centralized synchronous control of vehicles for a three lane road
+#This program allows the centralized synchronous control of vehicles for a three lane road.
 import turtle
 import time
 
 window = turtle.Screen()
-window.title("Synchronous Traffic Light")
+window.title("Centralized Synchronous Traffic Light")
 window.bgcolor("black")
 window.tracer(0)
 
