@@ -1,4 +1,4 @@
-#This program allows the synchronous direction of vehicles for a triple lane centralized system.
+#This program allows the centralized synchronous control of vehicles for a three lane road
 import turtle
 import time
 
