@@ -1,4 +1,4 @@
-                                                              PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM
+                                                          PARKING GARAGE, PEDESTRIAN AND ROAD TRAFFIC CONTROL SYSTEM
 
 I built multiple traffic control systems to allow free, organized and safe movement of humans, drivers and motor vehicles . They were as follows:
 
