@@ -1,3 +1,4 @@
+#This program allows safe and organized movement of drivers and cars in an automated parking garage.
 import turtle
 import time
 
