@@ -167,7 +167,7 @@ def state_advanced_machine():
     draw_circle(30, 15, 30, "black", "red")
     draw_circle(30, -75, 30, "black", "")
     draw_circle(30, -160, 30, "black", "")
-    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying/adding3 for the 3 traffic lights
+    time.sleep(1) #Stimulating approximately 30seconds for yellow light by multiplying/adding 3 for the 3 traffic lights
     
     light_box_state0 = "green"
 
