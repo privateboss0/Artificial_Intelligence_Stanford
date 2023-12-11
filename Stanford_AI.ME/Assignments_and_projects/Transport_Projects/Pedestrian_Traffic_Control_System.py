@@ -1,4 +1,4 @@
-#This program allows Bikes, Pedestrians, Disabled humans and others to cross the road safely.
+#This program allows disabled/wheelchair humans, pedestrians, bikers, skaters etc. to cross the road safely.
 import turtle
 import time
 
