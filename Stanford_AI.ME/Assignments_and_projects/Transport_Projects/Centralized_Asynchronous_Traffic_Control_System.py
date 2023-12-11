@@ -235,7 +235,7 @@ def state_machine_advanced():
     draw_circle(165, 15, 30, "black", "")
     draw_circle(165, -75, 30, "black", "yellow")
     draw_circle(165, -160, 30, "black", "")
-    time.sleep(8) #Stimulating approximately 120seconds for right green light.
+    time.sleep(12) #Stimulating approximately 120seconds for right green light.
     light_box_state1 = "red"
 
   window.ontimer(state_machine_advanced, 2000)
@@ -274,7 +274,7 @@ def machine_state_advanced():
     draw_circle(-105, 15, 30, "black", "")
     draw_circle(-105, -75, 30, "black", "")
     draw_circle(-105, -160, 30, "black", "green")
-    time.sleep(5) #Stimulating approximately 70seconds for left red light.
+    time.sleep(7) #Stimulating approximately 70seconds for left red light.
     
     light_box_state2 = "yellow"
   
@@ -284,7 +284,7 @@ def machine_state_advanced():
     draw_circle(-105, 15, 30, "black", "")
     draw_circle(-105, -75, 30, "black", "yellow")
     draw_circle(-105, -160, 30, "black", "")
-    time.sleep(7) #Stimulating approximately 150seconds for left green light.
+    time.sleep(15) #Stimulating approximately 150seconds for left green light.
     light_box_state2 = "red"
 
   window.ontimer(machine_state_advanced, 2000)
