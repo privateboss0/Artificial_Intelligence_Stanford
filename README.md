@@ -12,4 +12,6 @@ In respect with the modernization and digitalization of the traffic control infr
 
 -General Traffic Control System: A triple light box for alternating between Red(STOP), Yellow/Amber(SLOW), and Green(GO) to allow safe and organized movement for vehicles. The General traffic control system is also capable of (Single, Synchronous or Asynchronous) decentralized control for a one, two, three or multiple lane road, by simply running various instances of the code and adjusting the timers.
 
+Finally this project can be taken 2-steps further by adding CV + solar panels + Battery to ensure it is off the grid for Sustainability
+
 This was written in Python 3.xx programming language for the AI course project.
