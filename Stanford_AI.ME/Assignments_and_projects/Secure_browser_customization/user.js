@@ -275,11 +275,6 @@ user_pref("doh-rollout.home-region", "US");
 user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
 user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
 user_pref("browser.contentblocking.category", "strict");
-user_pref("network.proxy.socks", 127.0.0.1);
-user_pref("network.proxy.socks_port", 9050);
-user_pref("network.proxy.socks_version", 5);
-user_pref("network.proxy.type", 1);
-user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.protocol-handler.warn-external-default", true);
 user_pref("network.protocol-handler.external.http", false);
 user_pref("network.protocol-handler.external.https", false);
@@ -351,4 +346,4 @@ user_pref("security.ssl3.rsa_aes_256_sha", false);
 user_pref("security.ssl3.rsa_aes_128_sha", false);
 user_pref("security.ssl3.ecdhe_rsa_aes_256_sha", false);
 user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha", false);
-user_pref("security.tls.enable_kyber", true); //post quantum key exchange
+user_pref("security.tls.enable_kyber", true);
