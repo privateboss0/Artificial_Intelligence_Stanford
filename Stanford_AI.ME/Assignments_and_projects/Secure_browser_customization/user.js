@@ -1,4 +1,4 @@
-##For best results, combine this two projects together: https://github.com/privateboss0/Artificial_Intelligence_MIT/blob/goddevil/MIT_AI.ME/CyberSecurity/Secure_Tor_Ip_Changer/Secure_Auto_Tor_IP_Changer.py
+#For best results, combine this two projects together: https://github.com/privateboss0/Artificial_Intelligence_MIT/blob/goddevil/MIT_AI.ME/CyberSecurity/Secure_Tor_Ip_Changer/Secure_Auto_Tor_IP_Changer.py
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.page",  0);
